@@ -2,98 +2,108 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* ---------- BASE ---------- */
+/* ===== BASE ===== */
 body {
   background: #0b1220;
   color: #e5e7eb;
   line-height: 1.5;
 }
 
-/* ---------- HERO ---------- */
+/* ===== HERO ===== */
 .hero {
-  height: 80vh; /* reduced so content fits without scroll */
+  height: 68vh; /* compact hero */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0 20px;
+  padding: 0 18px;
   background: radial-gradient(circle at top, #1e293b, #020617);
 }
 
 .hero h1 {
-  font-size: 2.6rem;
+  font-size: 2rem; /* reduced */
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  letter-spacing: -0.3px;
 }
 
 .hero p {
-  font-size: 1.05rem;
+  font-size: 0.9rem; /* reduced */
   color: #94a3b8;
-  max-width: 520px;
+  max-width: 460px;
 }
 
-/* ---------- SECTIONS ---------- */
+/* ===== SECTIONS ===== */
 .section {
-  padding: 30px 20px; /* compact spacing */
+  padding: 28px 18px; /* tight spacing */
   max-width: 900px;
   margin: auto;
 }
 
 .section h2 {
-  font-size: 1.6rem;
-  margin-bottom: 14px;
+  font-size: 1.45rem;
+  margin-bottom: 12px;
   font-weight: 600;
 }
 
 .section p {
+  font-size: 0.95rem;
   color: #cbd5f5;
   max-width: 720px;
 }
 
-/* ---------- SKILLS ---------- */
+/* ===== SKILLS ===== */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 14px;
-  margin-top: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-top: 8px;
 }
 
 .card {
-  background: linear-gradient(145deg, #020617, #020617);
+  background: #020617;
   border: 1px solid #1e293b;
-  padding: 14px 10px;
+  padding: 12px 8px;
   border-radius: 10px;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
-  transition: transform 0.25s ease, border 0.25s ease;
+  transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   border-color: #38bdf8;
 }
 
-/* ---------- FOOTER ---------- */
+/* ===== FOOTER ===== */
 footer {
   text-align: center;
-  padding: 22px;
-  font-size: 0.85rem;
+  padding: 20px;
+  font-size: 0.8rem;
   color: #64748b;
   border-top: 1px solid #1e293b;
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* ===== MOBILE EXTRA COMPACT ===== */
 @media (max-width: 600px) {
-  .hero h1 {
-    font-size: 2.1rem;
+  .hero {
+    height: 62vh;
   }
 
-  .hero {
-    height: 75vh;
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero p {
+    font-size: 0.82rem;
+  }
+
+  .section h2 {
+    font-size: 1.3rem;
   }
 }
