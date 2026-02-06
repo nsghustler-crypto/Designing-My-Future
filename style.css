@@ -32,7 +32,7 @@ body {
 }
 
 .section {
-  padding: 60px 20px;
+  padding: 35px 20px;
   max-width: 900px;
   margin: auto;
 }
@@ -50,7 +50,9 @@ body {
 
 .card {
   background: #020617;
-  padding: 20px;
+  padding: 14px;
+  font-size: 0.95rem;
+}
   border-radius: 12px;
   text-align: center;
   transition: transform 0.3s;
