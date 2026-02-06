@@ -2,119 +2,63 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* ===== BASE ===== */
+/* BASE */
 body {
   background: #0b1220;
   color: #e5e7eb;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero {
-  height: 68vh; /* compact hero */
+  height: 65vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0 18px;
+  padding: 0 20px;
   background: radial-gradient(circle at top, #1e293b, #020617);
 }
 
 .hero h1 {
-  font-size: 2rem; /* reduced */
-  font-weight: 700;
+  font-size: 2rem;
   margin-bottom: 6px;
-  letter-spacing: -0.3px;
 }
 
 .hero p {
-  font-size: 0.9rem; /* reduced */
+  font-size: 0.9rem;
   color: #94a3b8;
-  max-width: 460px;
+  max-width: 480px;
 }
 
-/* ===== SECTIONS ===== */
+/* SECTIONS */
 .section {
-  padding: 28px 18px; /* tight spacing */
+  padding: 28px 20px;
   max-width: 900px;
   margin: auto;
 }
 
 .section h2 {
-  font-size: 1.45rem;
-  margin-bottom: 12px;
-  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
 }
 
 .section p {
   font-size: 0.95rem;
   color: #cbd5f5;
-  max-width: 720px;
 }
 
-/* ===== SKILLS ===== */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 12px;
-  margin-top: 8px;
-}
-
-.card {
-  background: #020617;
-  border: 1px solid #1e293b;
-  padding: 12px 8px;
-  border-radius: 10px;
-  text-align: center;
-  font-size: 0.85rem;
-  font-weight: 500;
-  transition: transform 0.25s ease, border-color 0.25s ease;
-}
-
-.card:hover {
-  transform: translateY(-3px);
-  border-color: #38bdf8;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 0.8rem;
-  color: #64748b;
-  border-top: 1px solid #1e293b;
-}
-
-/* ===== MOBILE EXTRA COMPACT ===== */
-@media (max-width: 600px) {
-  .hero {
-    height: 62vh;
-  }
-
-  .hero h1 {
-    font-size: 1.75rem;
-  }
-
-  .hero p {
-    font-size: 0.82rem;
-  }
-
-  .section h2 {
-    font-size: 1.3rem;
-  }
-}
-/* ===== SKILLS PROGRESS ===== */
+/* SKILLS */
 .skill {
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .skill span {
   font-size: 0.9rem;
-  font-weight: 500;
   display: block;
   margin-bottom: 6px;
 }
@@ -131,5 +75,35 @@ footer {
 .fill {
   height: 100%;
   background: linear-gradient(90deg, #38bdf8, #60a5fa);
-  border-radius: 10px;
 }
+
+/* SKILL LEVELS */
+.wd { width: 65%; }
+.ck { width: 70%; }
+.com { width: 55%; }
+.sd { width: 75%; }
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.8rem;
+  color: #64748b;
+  border-top: 1px solid #1e293b;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .hero {
+    height: 60vh;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero p {
+    font-size: 0.82rem;
+  }
+}
+  
