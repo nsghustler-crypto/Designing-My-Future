@@ -2,66 +2,98 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
 }
 
+/* ---------- BASE ---------- */
 body {
-  background: #0f172a;
+  background: #0b1220;
   color: #e5e7eb;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
+/* ---------- HERO ---------- */
 .hero {
-  height: 100vh;
+  height: 80vh; /* reduced so content fits without scroll */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(135deg, #020617, #1e293b);
+  padding: 0 20px;
+  background: radial-gradient(circle at top, #1e293b, #020617);
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   color: #94a3b8;
+  max-width: 520px;
 }
 
+/* ---------- SECTIONS ---------- */
 .section {
-  padding: 60px 20px;
+  padding: 30px 20px; /* compact spacing */
   max-width: 900px;
   margin: auto;
 }
 
 .section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 1.6rem;
+  margin-bottom: 14px;
+  font-weight: 600;
 }
 
+.section p {
+  color: #cbd5f5;
+  max-width: 720px;
+}
+
+/* ---------- SKILLS ---------- */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+  margin-top: 10px;
 }
 
 .card {
-  background: #020617;
-  padding: 20px;
-  border-radius: 12px;
+  background: linear-gradient(145deg, #020617, #020617);
+  border: 1px solid #1e293b;
+  padding: 14px 10px;
+  border-radius: 10px;
   text-align: center;
-  transition: transform 0.3s;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: transform 0.25s ease, border 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
+  border-color: #38bdf8;
 }
 
+/* ---------- FOOTER ---------- */
 footer {
   text-align: center;
-  padding: 30px;
+  padding: 22px;
+  font-size: 0.85rem;
   color: #64748b;
+  border-top: 1px solid #1e293b;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero {
+    height: 75vh;
+  }
 }
