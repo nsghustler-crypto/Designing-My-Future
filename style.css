@@ -1,90 +1,111 @@
 
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+/* ===== BASE ===== */
 body {
-  background: radial-gradient(circle at top, #0a1a2f, #050b16);
-  color: #eaf2ff;
-  min-height: 100vh;
+  background: #0b1220;
+  color: #e5e7eb;
+  line-height: 1.5;
 }
 
-.container {
-  max-width: 420px;
-  margin: auto;
-  padding: 16px;
-}
-
+/* ===== HERO ===== */
 .hero {
+  height: 68vh; /* compact hero */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  margin-bottom: 16px;
+  padding: 0 18px;
+  background: radial-gradient(circle at top, #1e293b, #020617);
 }
 
 .hero h1 {
-  font-size: 1.7rem;
-  margin-bottom: 4px;
+  font-size: 2rem; /* reduced */
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: -0.3px;
 }
 
 .hero p {
-  font-size: 0.85rem;
-  opacity: 0.8;
+  font-size: 0.9rem; /* reduced */
+  color: #94a3b8;
+  max-width: 460px;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 28px 18px; /* tight spacing */
+  max-width: 900px;
+  margin: auto;
+}
+
+.section h2 {
+  font-size: 1.45rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.section p {
+  font-size: 0.95rem;
+  color: #cbd5f5;
+  max-width: 720px;
+}
+
+/* ===== SKILLS ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-top: 8px;
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.04);
-  border-radius: 12px;
-  padding: 12px;
-  margin-bottom: 14px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-}
-
-.card h2 {
-  font-size: 1.1rem;
-  margin-bottom: 6px;
-}
-
-.card p {
+  background: #020617;
+  border: 1px solid #1e293b;
+  padding: 12px 8px;
+  border-radius: 10px;
+  text-align: center;
   font-size: 0.85rem;
-  line-height: 1.4;
-  opacity: 0.9;
+  font-weight: 500;
+  transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
-/* SKILLS — COMPACT */
-.skills .skill {
-  margin-bottom: 10px;
+.card:hover {
+  transform: translateY(-3px);
+  border-color: #38bdf8;
 }
 
-.skills span {
-  font-size: 0.8rem;
-  display: block;
-  margin-bottom: 3px;
-}
-
-.bar {
-  height: 7px;
-  background: rgba(255,255,255,0.15);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.fill {
-  height: 100%;
-  background: linear-gradient(90deg, #2dd4ff, #60a5fa);
-  border-radius: 10px;
-}
-
-/* Width helpers */
-.w55 { width: 55%; }
-.w65 { width: 65%; }
-.w70 { width: 70%; }
-.w75 { width: 75%; }
-
+/* ===== FOOTER ===== */
 footer {
   text-align: center;
-  font-size: 0.7rem;
-  opacity: 0.6;
-  margin-top: 8px;
+  padding: 20px;
+  font-size: 0.8rem;
+  color: #64748b;
+  border-top: 1px solid #1e293b;
+}
+
+/* ===== MOBILE EXTRA COMPACT ===== */
+@media (max-width: 600px) {
+  .hero {
+    height: 62vh;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero p {
+    font-size: 0.82rem;
+  }
+
+  .section h2 {
+    font-size: 1.3rem;
+  }
 }
